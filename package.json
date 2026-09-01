@@ -1,0 +1,11 @@
+{
+  "name": "r2h-second-brain",
+  "private": true,
+  "packageManager": "pnpm",
+  "scripts": {
+    "format:check": "pnpm --dir apps/desktop format:check",
+    "lint": "pnpm --dir apps/desktop lint",
+    "test": "pnpm --dir apps/desktop test",
+    "build": "pnpm --dir apps/desktop build"
+  }
+}

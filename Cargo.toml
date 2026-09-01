@@ -1,0 +1,28 @@
+[workspace]
+resolver = "2"
+members = [
+  "crates/knowledge-domain",
+  "crates/knowledge-app",
+  "crates/knowledge-db",
+  "crates/knowledge-storage",
+  "crates/knowledge-ingestion",
+  "crates/knowledge-search",
+  "crates/knowledge-e2e",
+  "apps/desktop/src-tauri",
+]
+
+[workspace.package]
+edition = "2024"
+license = "Proprietary"
+publish = false
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+unused_must_use = "deny"
+
+[workspace.lints.clippy]
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
+todo = "deny"
+unimplemented = "deny"

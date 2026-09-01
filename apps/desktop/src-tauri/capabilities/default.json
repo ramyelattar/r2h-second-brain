@@ -1,0 +1,13 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "main-window",
+  "description": "Minimum local capability for the R2H Second Brain window.",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "dialog:allow-open",
+    "core:event:allow-listen",
+    "core:event:allow-unlisten"
+  ]
+}

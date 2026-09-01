@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "R2H Second Brain",
+  "version": "0.1.0",
+  "identifier": "ai.r2h.second-brain",
+  "build": {
+    "beforeDevCommand": "pnpm dev -- --host 127.0.0.1 --port 1420",
+    "beforeBuildCommand": "pnpm build",
+    "devUrl": "http://localhost:1420",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self'; connect-src ipc: http://ipc.localhost; img-src 'self' data: blob:; object-src 'none'; frame-src 'none'; base-uri 'self'"
+    },
+    "windows": [
+      {
+        "label": "main",
+        "title": "R2H Second Brain",
+        "width": 1200,
+        "height": 800,
+        "additionalBrowserArgs": "--disable-background-networking --disable-component-update --no-proxy-server --disable-features=msWebOOUI,msPdfOOUI,msSmartScreenProtection,msOneAuthWAM"
+      }
+    ]
+  },
+  "bundle": {
+    "active": false,
+    "icon": ["icons/icon.ico"]
+  }
+}

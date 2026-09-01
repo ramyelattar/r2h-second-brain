@@ -1,0 +1,35 @@
+[package]
+name = "r2h-second-brain-desktop"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[lib]
+name = "r2h_second_brain_desktop"
+crate-type = ["lib", "cdylib", "staticlib"]
+
+[[bin]]
+name = "r2h-second-brain-app"
+path = "src/main.rs"
+
+[lints]
+workspace = true
+
+[build-dependencies]
+tauri-build = { version = "2.6.3", features = [] }
+
+[dependencies]
+knowledge-app = { path = "../../../crates/knowledge-app" }
+knowledge-domain = { path = "../../../crates/knowledge-domain" }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.150"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "stream"] }
+futures-util = "0.3"
+tokio-util = "0.7"
+tokio = { version = "1", features = ["io-util", "macros", "net", "rt-multi-thread", "sync", "time"] }
+tauri = { version = "2.11.5", features = [] }
+tauri-plugin-dialog = "2.7.2"
+
+[dev-dependencies]
+tempfile = "3"

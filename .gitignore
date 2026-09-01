@@ -1,0 +1,36 @@
+/target/
+/node_modules/
+/apps/desktop/node_modules/
+/apps/desktop/dist/
+/apps/desktop/src-tauri/target/
+/apps/desktop/src-tauri/gen/
+*.db
+*.db-shm
+*.db-wal
+/local-data/
+/release-output/
+/test-output/
+
+AI/
+
+# Local/generated workspace data
+.mimosa/
+.v2c/
+.video_agent/
+audit-output/
+release-staging/
+run-data/
+AI/
+
+# Excluded from repository
+/.editorconfig
+/AGENTS.md
+/crates/
+/docs/
+/engines/
+/phase-c4-3-latest-history.json
+
+*.before-*
+
+__pycache__/
+*.pyc
